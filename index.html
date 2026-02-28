@@ -2,251 +2,214 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bolis Hakim Resume</title>
-    <meta name="description" content="Core HTML Project">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
-
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bolis Hakim &#x2014; AI Engineer &amp; FinTech Specialist</title>
+    <meta name="description" content="AI Engineer building intelligent systems at the intersection of AI, data, and business. Master's researcher at TU Graz.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        #gtco-who-we-are .section-title {
-            font-size: 4rem;
+        :root{--bg:#0a0a0f;--bg-card:#12121a;--bg-card-hover:#1a1a26;--border:#1e1e2e;--text:#e4e4ef;--text-muted:#8888a0;--accent:#5b8def;--accent-glow:rgba(91,141,239,.12);--accent-2:#a78bfa;--accent-3:#34d399;--radius:16px;}
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+        body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;}
+        body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;}
+        .container{max-width:1100px;margin:0 auto;padding:0 24px;}
+        a{color:inherit;text-decoration:none;}
+        nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:all .4s ease;}
+        nav.scrolled{background:rgba(10,10,15,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 0;}
+        nav .container{display:flex;justify-content:space-between;align-items:center;}
+        .nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;letter-spacing:-.02em;}
+        .nav-links{display:flex;gap:32px;list-style:none;}
+        .nav-links a{color:var(--text-muted);font-size:.875rem;font-weight:500;letter-spacing:.02em;transition:color .3s;}
+        .nav-links a:hover{color:var(--text);}
+        .hamburger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;}
+        .hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;}
+        .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(91,141,239,.08) 0%,transparent 70%);pointer-events:none;}
+        .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:center;}
+        .hero-text{animation:fadeUp .8s ease-out;}
+        .hero-label{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+        .hero-label::before{content:'';width:32px;height:2px;background:var(--accent);}
+        h1{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:24px;}
+        h1 .accent{color:var(--accent);}
+        .hero-desc{font-size:1.08rem;color:var(--text-muted);line-height:1.8;max-width:540px;margin-bottom:40px;}
+        .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;transition:all .3s ease;cursor:pointer;border:none;}
+        .btn-primary{background:var(--accent);color:#fff;box-shadow:0 4px 24px rgba(91,141,239,.3);}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(91,141,239,.4);}
+        .btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border);}
+        .btn-outline:hover{border-color:var(--accent);background:var(--accent-glow);}
+        .hero-photo{display:flex;justify-content:center;animation:fadeUp .8s ease-out .2s both;}
+        .photo-frame{position:relative;width:300px;height:300px;}
+        .photo-frame img{width:100%;height:100%;object-fit:cover;border-radius:24px;position:relative;z-index:2;filter:grayscale(15%);}
+        .photo-frame::before{content:'';position:absolute;inset:-3px;border-radius:26px;background:linear-gradient(135deg,var(--accent),var(--accent-2));z-index:1;opacity:.5;}
+        .photo-frame::after{content:'';position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;border:2px solid var(--border);border-radius:24px;z-index:0;}
+        .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:80px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+        .stat{text-align:center;}
+        .stat-number{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:800;color:var(--accent);line-height:1.2;}
+        .stat-label{font-size:.82rem;color:var(--text-muted);font-weight:500;margin-top:4px;}
+        section{padding:100px 0;position:relative;}
+        .section-label{display:inline-flex;align-items:center;gap:8px;font-size:.73rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+        .section-label::before{content:'';width:24px;height:2px;background:var(--accent);}
+        h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;letter-spacing:-.02em;margin-bottom:20px;}
+        .section-desc{color:var(--text-muted);font-size:1.02rem;max-width:600px;margin-bottom:56px;}
+        .tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+        .tech-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s ease;}
+        .tech-card:hover{border-color:var(--accent);background:var(--bg-card-hover);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3);}
+        .tech-icon{font-size:1.6rem;margin-bottom:16px;}
+        .tech-card h3{font-size:1rem;font-weight:600;margin-bottom:14px;}
+        .tech-tags{display:flex;flex-wrap:wrap;gap:8px;}
+        .tag{font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:500;padding:5px 12px;border-radius:6px;}
+        .tag-blue{background:rgba(91,141,239,.1);color:var(--accent);border:1px solid rgba(91,141,239,.15);}
+        .tag-green{background:rgba(52,211,153,.1);color:var(--accent-3);border:1px solid rgba(52,211,153,.15);}
+        .tag-purple{background:rgba(167,139,250,.1);color:var(--accent-2);border:1px solid rgba(167,139,250,.15);}
+        .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+        .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:36px;transition:all .3s ease;position:relative;overflow:hidden;}
+        .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-2));opacity:0;transition:opacity .3s;}
+        .project-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.3);}
+        .project-card:hover::before{opacity:1;}
+        .project-card.featured{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
+        .badge{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:6px;margin-bottom:16px;}
+        .badge-private{background:rgba(167,139,250,.1);color:var(--accent-2);border:1px solid rgba(167,139,250,.15);}
+        .badge-public{background:rgba(52,211,153,.1);color:var(--accent-3);border:1px solid rgba(52,211,153,.15);}
+        .project-card h3{font-size:1.12rem;font-weight:600;margin-bottom:12px;}
+        .project-card p{color:var(--text-muted);font-size:.9rem;line-height:1.7;margin-bottom:16px;}
+        .project-features{list-style:none;margin-bottom:20px;}
+        .project-features li{color:var(--text-muted);font-size:.85rem;padding:3px 0 3px 20px;position:relative;}
+        .project-features li::before{content:'\203A';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:1.1rem;}
+        .project-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:var(--accent);transition:gap .3s;}
+        .project-link:hover{gap:10px;}
+        .project-link svg{width:16px;height:16px;}
+        .timeline{position:relative;padding-left:40px;}
+        .timeline::before{content:'';position:absolute;left:14px;top:8px;bottom:8px;width:2px;background:var(--border);}
+        .timeline-item{position:relative;margin-bottom:48px;}
+        .timeline-item:last-child{margin-bottom:0;}
+        .timeline-dot{position:absolute;left:-40px;top:6px;width:28px;height:28px;border-radius:50%;border:2px solid var(--accent);background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:2;}
+        .timeline-dot::after{content:'';width:10px;height:10px;border-radius:50%;background:var(--accent);}
+        .timeline-date{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);font-weight:500;margin-bottom:6px;}
+        .timeline-item h3{font-size:1.08rem;font-weight:600;margin-bottom:4px;}
+        .timeline-item .company{font-size:.9rem;color:var(--text-muted);margin-bottom:10px;}
+        .timeline-item p{font-size:.9rem;color:var(--text-muted);line-height:1.7;}
+        .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+        .edu-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s ease;}
+        .edu-card:hover{border-color:var(--accent);transform:translateY(-2px);}
+        .edu-card .year{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);font-weight:500;margin-bottom:8px;}
+        .edu-card h3{font-size:1.05rem;font-weight:600;margin-bottom:4px;}
+        .edu-card .school{color:var(--text-muted);font-size:.9rem;margin-bottom:12px;}
+        .edu-card p{font-size:.85rem;color:var(--text-muted);line-height:1.6;}
+        .contact-section{text-align:center;padding:120px 0;}
+        .contact-section h2{margin-bottom:16px;}
+        .contact-section .section-desc{margin:0 auto 48px;}
+        .contact-links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+        .contact-link{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:var(--radius);background:var(--bg-card);border:1px solid var(--border);font-weight:500;font-size:.9rem;transition:all .3s ease;}
+        .contact-link:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.3);}
+        .contact-link svg{width:20px;height:20px;color:var(--accent);}
+        footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;}
+        footer p{color:var(--text-muted);font-size:.82rem;}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+        .fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+        .fade-in.visible{opacity:1;transform:translateY(0);}
+        @media(max-width:900px){
+            .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center;}
+            .hero-desc{margin:0 auto 40px;}
+            .hero-actions{justify-content:center;}
+            .hero-photo{order:-1;}
+            .photo-frame{width:220px;height:220px;}
+            .stats-row{grid-template-columns:repeat(2,1fr);gap:32px;}
+            .tech-grid,.projects-grid,.edu-grid{grid-template-columns:1fr;}
+            .project-card.featured{grid-column:span 1;grid-template-columns:1fr;}
+            .nav-links{display:none;}
+            .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,15,.95);backdrop-filter:blur(20px);padding:24px;gap:20px;border-bottom:1px solid var(--border);}
+            .hamburger{display:block;}
         }
-        #gtco-who-we-are .contact-info a {
-            font-size: 1.25rem;
-        }
-        #gtco-who-we-are .contact-info span {
-            font-size: 1.25rem;
-        }
-        #gtco-who-we-are .section-sub-title {
-            font-size: 1.6rem;
-        }
+        @media(max-width:480px){.contact-links{flex-direction:column;align-items:center;}}
     </style>
-    
 </head>
-<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
-    <div class="boxed-page">
-        <nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
-            <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="/"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav-header" aria-controls="navbar-nav-header" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="lnr lnr-menu"></span>
-                </button>
-            </div>
-        </nav>
+<body>
+<nav id="nav"><div class="container"><a href="#" class="nav-logo">BH.</a><button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#tech">Stack</a></li><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
 
-        <section id="gtco-who-we-are" class="bg-white">
-            <div class="container">
-                <div class="section-content">
-                    <div class="title-wrap d-flex align-items-center">
-                        <img src="img/profile-picture.jpg" alt="Profile Image" width="220" height="220" class="mr-3 rounded-circle">
-                        <div>
-                            <h1 class="section-title mb-0 text-left"><b>Bolis Hakim</b></h1>
-                            <div class="contact-info mt-2 text-left">
-                                <div class="mb-2">
-                                    <a href="https://www.linkedin.com/in/bolis-hakim/" target="_blank">https://www.linkedin.com/in/bolis-hakim/</a>
-                                </div>
-                                <div class="mb-2">
-                                    <a href="https://github.com/bolishakim" target="_blank">https://github.com/bolishakim</a>
-                                </div>
-                                <div>
-                                    <span class="mr-3">bolis.kamel@icloud.com</span>
-                                    <span>+43-6766982039</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="section-sub-title ml-5 text-left">
-                        <br>Experienced banking professional with over a decade in internal audit, compliance, and operations management. 
-                        Currently pursuing a Master’s in Computational Social Systems, specializing in data analysis and machine learning. 
-                        Proven ability to enhance operational efficiency through data-driven decision-making. Seeking a data science, 
-                        fintech, or consultancy role.
-                    </p>
-                </div>
-                
-                <!-- Experience Section -->
-                <div class="row text-center">
-                    <div class="col-md-4 col-sm-6">
-                        <h3 class="mb-4 mx-2 text-left" style="margin-left: 20px !important; font-weight: bold; font-size: 20px;">Experience</h3>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">
-                        <!-- Experience 1 -->
-                        <div class="col-md-9">
-                            <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">Senior Permanent Controller (Internal Audit) - Qatar National Bank Alahli S.a.e.</p>
-                            <p class="no-space" style="font-size: 13px; margin-left: 30px;">May 2021 – October 2023, Aswan, Egypt</p>
-                            <ul style="margin-left: 30px; margin-top: 10px;">
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Oversaw the implementation of the bank’s internal controls, monitoring daily operations for compliance.</li>
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Employed regulatory techniques to support branch objectives and enhance staff awareness.</li>
-                            </ul>
-                        </div>
-
-                        <hr style="margin-left: 30px; margin-top: 15px; margin-bottom: 15px; border: 1px solid #f4f4f4f0;">
-                        
-                        <!-- Experience 2 -->
-                        <div class="col-md-9">
-                            <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">Permanent Controller (Internal Audit) - Qatar National Bank Alahli S.a.e.</p>
-                            <p class="no-space" style="font-size: 13px; margin-left: 30px;">April 2017 – April 2021, Qena, Egypt</p>
-                            <ul style="margin-left: 30px; margin-top: 10px;">
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Assessed internal control effectiveness, ensuring asset protection and promptly reporting fraud incidents.</li>
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Managed audits and improved the branch’s operational efficiency.</li>
-                            </ul>
-                        </div>
-
-                        <hr style="margin-left: 30px; margin-top: 15px; margin-bottom: 15px; border: 1px solid #f4f4f4f0;">
-
-                        <!-- Experience 3 -->
-                        <div class="col-md-9">
-                            <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">Operations Head - Qatar National Bank Alahli S.a.e.</p>
-                            <p class="no-space" style="font-size: 13px; margin-left: 30px;">April 2014 – March 2017, Luxor, Egypt</p>
-                            <ul style="margin-left: 30px; margin-top: 10px;">
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Managed operations across multiple areas and ensured efficient customer service.</li>
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Coordinated compliance and anti-money laundering activities.</li>
-                            </ul>
-                        </div>
-
-                        <hr style="margin-left: 30px; margin-top: 15px; margin-bottom: 15px; border: 1px solid #f4f4f4f0;">
-
-                        <!-- Experience 4 -->
-                        <div class="col-md-9">
-                            <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">Operations Officer - Qatar National Bank Alahli S.a.e.</p>
-                            <p class="no-space" style="font-size: 13px; margin-left: 30px;">October 2010 – March 2014, Sharm El Sheikh, Egypt</p>
-                            <ul style="margin-left: 30px; margin-top: 10px;">
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Reviewed branch expenses, analyzed financial positions, and enhanced profitability.</li>
-                                <li style="font-size: 14.5px; margin-bottom: 5px;">Maintained the quality of operations and services.</li>
-                            </ul>
-                        </div>
-
-                        <!-- Projects Section -->
-                        <div class="row text-center">
-                            <div class="col-md-4 col-sm-6">
-                                <h3 class="mb-4 mx-2 text-left" style="margin-left: 20px !important; font-weight: bold; font-size: 20px;">Education</h3>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">Technische Universität Graz, Graz, Austria</p>
-                                    <p class="no-space" style="font-size: 13px; margin-left: 30px;">Master’s in Computational Social Systems (Business Analytics), Oct 2023 – Present</p>
-                                    <ul style="margin-left: 30px; margin-top: 10px;">
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">Expected Graduation: July 2026</li>
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">Studying machine learning, data mining, social network analysis, and computational modeling of social systems.</li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-md-9">
-                                    <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">South Valley University, Qena, Egypt</p>
-                                    <p class="no-space" style="font-size: 13px; margin-left: 30px;">Bachelor’s Degree in Commerce, Major in Accounting (English), Oct 2004 – Jun 2008</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Projects Section -->
-                        <div class="row text-center">
-                            <div class="col-md-4 col-sm-6">
-                                <h3 class="mb-4 mx-2 text-left" style="margin-left: 20px !important; font-weight: bold; font-size: 20px;">Projects</h3>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">Crypto Sentiment Analysis</p>
-                                    <p class="no-space" style="font-size: 13px; margin-left: 30px;">Feb 2024</p>
-                                    <ul style="margin-left: 30px; margin-top: 10px;">
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">Analyzed sentiment in Reddit posts and explored its effect on Bitcoin prices using Python.</li>
-                                    </ul>
-
-                                    <p class="no-space" style="font-size: 16px; font-weight: bold; margin-left: 30px;">House Price Prediction</p>
-                                    <p class="no-space" style="font-size: 13px; margin-left: 30px;">Jun 2024</p>
-                                    <ul style="margin-left: 30px; margin-top: 10px;">
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">Developed a machine learning model for estimating house prices using Python.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Skills Section -->
-                        <div class="row text-center">
-                            <div class="col-md-4 col-sm-6">
-                                <h3 class="mb-4 mx-2 text-left" style="margin-left: 20px !important; font-weight: bold; font-size: 20px;">Skills</h3>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <ul style="margin-left: 30px; margin-top: 10px;">
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;"><strong>Professional Skills:</strong> Regulatory Compliance, Operations Management, Risk Assessment, Fraud Detection</li>
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;"><strong>Technical Skills:</strong> Python, R, SQL, Power BI, Scikit-learn, Matplotlib, Seaborn</li>
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;"><strong>Personal Skills:</strong> Problem-Solving, Leadership, Decision-Making, Adaptability</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Languages Section -->
-                        <div class="row text-center">
-                            <div class="col-md-4 col-sm-6">
-                                <h3 class="mb-4 mx-2 text-left" style="margin-left: 20px !important; font-weight: bold; font-size: 20px;">Languages</h3>
-                            </div>
-                        </div>
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <ul style="margin-left: 30px; margin-top: 10px;">
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">Arabic: Native</li>
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">English: Fluent</li>
-                                        <li style="font-size: 14.5px; margin-bottom: 5px;">German: Basic Proficiency (Improving)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="mastfoot mb-3 bg-white py-4 border-top">
-            <div class="inner container">
-                <div class="row"></div>
-            </div>
-        </footer>    
+<section class="hero" id="about"><div class="container"><div class="hero-grid">
+    <div class="hero-text">
+        <div class="hero-label">AI Engineer &#183; Graz, Austria</div>
+        <h1>Building <span class="accent">intelligent systems</span> at the intersection of AI &amp; business</h1>
+        <p class="hero-desc">AI engineer with 10+ years of banking &amp; risk management experience. Currently completing my Master's in Computational Social Systems at TU Graz, researching how conversational AI transforms business intelligence. Founder of an AI solutions agency in Austria.</p>
+        <div class="hero-actions">
+            <a href="https://linkedin.com/in/bolis-hakim" target="_blank" class="btn btn-primary"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+            <a href="https://github.com/bolishakim" target="_blank" class="btn btn-outline"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
+        </div>
     </div>
-    
-    <!-- External JS -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-    <script src="vendor/bootstrap/popper.min.js"></script>
-    <script src="vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-    <script src="vendor/isotope/isotope.min.js"></script>
-    <script src="vendor/lightcase/lightcase.js"></script>
-    <script src="vendor/waypoints/waypoint.min.js"></script>
-    <script src="vendor/countTo/jquery.countTo.js"></script>
+    <div class="hero-photo"><div class="photo-frame"><img src="img/profile-picture.jpg" alt="Bolis Hakim"></div></div>
+</div></div></section>
 
-    <!-- Main JS -->
-    <script src="js/app.min.js"></script>
-    <script src="//localhost:35729/livereload.js"></script>
+<div class="container"><div class="stats-row fade-in">
+    <div class="stat"><div class="stat-number">10+</div><div class="stat-label">Years in Banking &amp; Risk</div></div>
+    <div class="stat"><div class="stat-number">M.Sc.</div><div class="stat-label">Computational Social Systems</div></div>
+    <div class="stat"><div class="stat-number">6+</div><div class="stat-label">Full-Stack Projects Built</div></div>
+    <div class="stat"><div class="stat-number">3</div><div class="stat-label">Languages Spoken</div></div>
+</div></div>
+
+<section id="tech"><div class="container">
+    <div class="fade-in"><div class="section-label">Tech Stack</div><h2>Tools I build with</h2><p class="section-desc">From data pipelines to production full-stack apps &#8212; every layer, built from the ground up.</p></div>
+    <div class="tech-grid">
+        <div class="tech-card fade-in"><div class="tech-icon">&#129504;</div><h3>AI &amp; Machine Learning</h3><div class="tech-tags"><span class="tag tag-purple">LangChain</span><span class="tag tag-purple">OpenAI</span><span class="tag tag-purple">Claude AI</span><span class="tag tag-purple">RAG</span><span class="tag tag-purple">NL2SQL</span><span class="tag tag-purple">scikit-learn</span></div></div>
+        <div class="tech-card fade-in"><div class="tech-icon">&#9889;</div><h3>Backend &amp; Data</h3><div class="tech-tags"><span class="tag tag-blue">Python</span><span class="tag tag-blue">FastAPI</span><span class="tag tag-blue">PostgreSQL</span><span class="tag tag-blue">SQLAlchemy</span><span class="tag tag-blue">SQL</span><span class="tag tag-blue">R</span></div></div>
+        <div class="tech-card fade-in"><div class="tech-icon">&#127912;</div><h3>Frontend &amp; DevOps</h3><div class="tech-tags"><span class="tag tag-green">Next.js</span><span class="tag tag-green">TypeScript</span><span class="tag tag-green">React</span><span class="tag tag-green">Tailwind CSS</span><span class="tag tag-green">Docker</span></div></div>
+    </div>
+</div></section>
+
+<section id="projects"><div class="container">
+    <div class="fade-in"><div class="section-label">Projects</div><h2>What I've built</h2><p class="section-desc">Production systems and research projects &#8212; from enterprise platforms to ML pipelines.</p></div>
+    <div class="projects-grid">
+        <div class="project-card featured fade-in">
+            <div><span class="badge badge-private">&#128274; Private &#183; Master's Thesis</span><h3>Conversational BI Chatbot</h3><p>AI-augmented analytics dashboard that lets users query business databases using natural language. Ask questions in plain English, get instant SQL-powered insights with interactive visualizations.</p><ul class="project-features"><li>NL2SQL with Chain-of-Thought reasoning</li><li>RAG-based schema navigation</li><li>Workforce &amp; inventory dashboards</li><li>Multi-turn conversational context</li></ul><div class="tech-tags"><span class="tag tag-blue">Python</span><span class="tag tag-blue">FastAPI</span><span class="tag tag-green">Next.js</span><span class="tag tag-purple">LangChain</span><span class="tag tag-purple">RAG</span><span class="tag tag-blue">PostgreSQL</span></div></div>
+            <div><span class="badge badge-private">&#128274; Private &#183; Client Project</span><h3>AI Document Processing Platform</h3><p>Enterprise document management system with AI-powered PDF extraction. Processes multi-page scanned documents, classifies types, and extracts structured data using LLM vision.</p><ul class="project-features"><li>AI data extraction from scanned PDFs</li><li>Fuzzy matching to master data</li><li>Role-based access with 2FA &amp; audit trail</li><li>Compliance reporting (PDF/Excel)</li></ul><div class="tech-tags"><span class="tag tag-blue">Python</span><span class="tag tag-blue">FastAPI</span><span class="tag tag-green">Next.js</span><span class="tag tag-purple">Claude AI</span><span class="tag tag-blue">PostgreSQL</span><span class="tag tag-green">Docker</span></div></div>
+        </div>
+        <div class="project-card fade-in"><span class="badge badge-public">&#10022; Open Source</span><h3>Time Series Anomaly Detection</h3><p>KNN-based anomaly detection pipeline for temporal data. Fine-tuned model parameters to identify collective anomalies in univariate time series.</p><div class="tech-tags" style="margin-bottom:16px"><span class="tag tag-blue">Python</span><span class="tag tag-purple">scikit-learn</span><span class="tag tag-blue">pandas</span></div><a href="https://github.com/bolishakim/TimeSeriesDetectives" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        <div class="project-card fade-in"><span class="badge badge-public">&#10022; Open Source</span><h3>Spotify Streaming Analytics</h3><p>PostgreSQL database analyzing Spotify's most streamed songs. Designed relational schema with complex SQL queries correlating track features and popularity.</p><div class="tech-tags" style="margin-bottom:16px"><span class="tag tag-blue">PostgreSQL</span><span class="tag tag-blue">SQL</span><span class="tag tag-blue">Python</span></div><a href="https://github.com/bolishakim/Spotify-Most-Streamed-Songs-Database-Project" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        <div class="project-card fade-in"><span class="badge badge-public">&#10022; Open Source</span><h3>Crypto Sentiment Analysis</h3><p>NLP pipeline analyzing Reddit sentiment across crypto subreddits. Explored correlations between social media sentiment and Bitcoin price movements.</p><div class="tech-tags" style="margin-bottom:16px"><span class="tag tag-blue">Python</span><span class="tag tag-purple">NLTK</span><span class="tag tag-blue">pandas</span></div><a href="https://github.com/bolishakim/Crypto-sentiment-analysis" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        <div class="project-card fade-in"><span class="badge badge-public">&#10022; Open Source</span><h3>House Price Prediction</h3><p>ML pipeline comparing Linear Regression, Random Forest, and Gradient Boosting for real estate pricing. Includes EDA, feature engineering, and model evaluation.</p><div class="tech-tags" style="margin-bottom:16px"><span class="tag tag-blue">Python</span><span class="tag tag-purple">scikit-learn</span><span class="tag tag-blue">pandas</span></div><a href="https://github.com/bolishakim/House-Price-Prediction-Project" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+    </div>
+</div></section>
+
+<section id="experience"><div class="container">
+    <div class="fade-in"><div class="section-label">Experience</div><h2>Career journey</h2><p class="section-desc">From banking operations to AI engineering &#8212; a decade of domain expertise meets cutting-edge technology.</p></div>
+    <div class="timeline fade-in">
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Jul 2025 &#8212; Present</div><h3>Founder &amp; IT / Data Solutions Provider</h3><div class="company">Self-Employed &#183; Graz, Austria</div><p>Founded a registered IT agency specializing in AI-powered business analysis, automation, and data processing solutions. Develop and deploy smart technologies for data-driven decision-making and business efficiency.</p></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">May 2021 &#8212; Oct 2023</div><h3>Senior Permanent Controller (Risk Sector)</h3><div class="company">Qatar National Bank Alahli S.a.e. (QNB Group) &#183; Aswan, Egypt</div><p>Led internal control systems across 10 branches with 15% reduction in operational risks. Discovered internal financial manipulation through detailed data analysis, coordinating corrective measures with audit.</p></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Apr 2017 &#8212; Apr 2021</div><h3>Permanent Controller (Risk Sector)</h3><div class="company">Qatar National Bank Alahli S.a.e. (QNB Group) &#183; Qena, Egypt</div><p>Conducted data-driven internal audits contributing to 80% decrease in reported fraud cases. Assessed branch-level controls with reports that directly influenced senior management decisions.</p></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Apr 2014 &#8212; Mar 2017</div><h3>Operations Head (Branches Network)</h3><div class="company">Qatar National Bank Alahli S.a.e. (QNB Group) &#183; Luxor, Egypt</div><p>Supervised cash and non-cash operations across branches. Primary liaison with regulatory authorities for compliance and AML standards. Introduced KPIs and reporting systems.</p></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Oct 2010 &#8212; Mar 2014</div><h3>Operations Officer</h3><div class="company">Qatar National Bank Alahli S.a.e. (QNB Group) &#183; Sharm El Sheikh, Egypt</div><p>Analyzed branch financial performance and maintained control systems to safeguard assets and ensure data accuracy across operational functions.</p></div>
+        <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-date">Jan 2009 &#8212; Sep 2010</div><h3>Customer Advisor</h3><div class="company">Qatar National Bank Alahli S.a.e. (QNB Group) &#183; Sharm El Sheikh, Egypt</div><p>Delivered customer service using data insights to promote bank products, contributing to enhanced customer satisfaction and retention.</p></div>
+    </div>
+</div></section>
+
+<section id="education"><div class="container">
+    <div class="fade-in"><div class="section-label">Education</div><h2>Academic background</h2></div>
+    <div class="edu-grid fade-in">
+        <div class="edu-card"><div class="year">Oct 2023 &#8212; Present (Expected Jul 2026)</div><h3>M.Sc. Computational Social Systems</h3><div class="school">Technische Universit&#228;t Graz &#183; Austria</div><p>Specialization in Business Analytics. Coursework: Machine Learning, Data Mining, Business Intelligence, Statistical Analysis (Python, R), Social Network Analysis, Recommender Systems.</p></div>
+        <div class="edu-card"><div class="year">Oct 2004 &#8212; Jun 2008</div><h3>B.Sc. Commerce (Accounting)</h3><div class="school">South Valley University &#183; Egypt</div><p>Foundation in financial analysis, auditing, corporate finance, managerial accounting, and business administration.</p></div>
+    </div>
+</div></section>
+
+<section class="contact-section" id="contact"><div class="container fade-in">
+    <div class="section-label" style="justify-content:center">Get in touch</div>
+    <h2>Let's work together</h2>
+    <p class="section-desc">Open to collaborations in AI/ML, conversational AI, NL2SQL, and FinTech. Currently based in Graz, Austria.</p>
+    <div class="contact-links">
+        <a href="https://linkedin.com/in/bolis-hakim" target="_blank" class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+        <a href="https://github.com/bolishakim" target="_blank" class="contact-link"><svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
+        <a href="mailto:bolis.kamel@icloud.com" class="contact-link"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" width="20" height="20"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Email</a>
+    </div>
+</div></section>
+
+<footer><div class="container"><p>&#169; 2026 Bolis Hakim. Built from scratch.</p></div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>50);});
+const observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(function(el){observer.observe(el);});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.nav-links').classList.remove('open');});});
+</script>
 </body>
 </html>
